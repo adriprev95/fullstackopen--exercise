@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -5,7 +6,7 @@ sequenceDiagram
 browser ->> server: POST https://studies.cs.helsinki.fi/exampleapp/new_notes[{ "content": "Form data is send with HTTP POST", "date": "2025-20-02"}]
     activate server
 server-- >> browser: HTTP 302 location: /notes
-    deactivate server    
+    deactivate server
 
 browser ->> server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -30,3 +31,4 @@ server-- >> browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+```
