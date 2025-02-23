@@ -5,7 +5,7 @@ sequenceDiagram
 
 browser ->> server: POST https://studies.cs.helsinki.fi/exampleapp/new_notes[{ "content": "Form data is send with HTTP POST", "date": "2025-20-02"}]
     activate server
-server-- >> browser: HTTP 302 location: /notes
+server-- >> browser: 302 location:/notes
     deactivate server
 
 browser ->> server: GET https://studies.cs.helsinki.fi/exampleapp/notes
